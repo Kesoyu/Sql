@@ -12,3 +12,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 }
+/*
+Witam o to Plan działania
+- Doddajemy w app 2 implementsy
+- Tworzymy klase dla naszych danych Product
+- Tworzymy interfejs dla naszych produktów ProductDao
+ */
