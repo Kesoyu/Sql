@@ -15,8 +15,7 @@ public class Product {
     @ColumnInfo(name = "cena")
     private double cena;
 
-    public Product(int id, String nazwa, double cena) {
-        this.id = id;
+    public Product(String nazwa, double cena) {
         this.nazwa = nazwa;
         this.cena = cena;
     }

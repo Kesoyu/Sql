@@ -10,6 +10,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ProductDatabase db = ProductDatabase.getInstance(getApplicationContext());
+        Product p1 = new Product("komputer",3000);
+        db.productDao().wstawProdukt(p1);
+        Product p2 = new Product("Monitor",1200);
+        db.productDao().wstawProdukt(p2);
     }
 }
 /*
@@ -17,4 +22,6 @@ Witam o to Plan działania
 - Doddajemy w app 2 implementsy
 - Tworzymy klase dla naszych danych Product
 - Tworzymy interfejs dla naszych produktów ProductDao
+- Tworzymy klase ProducDataBase musi byc abstrakcyjna i rozeszerzac klase RoomDatabase
+- W ProductDataBase sie skup bo skomplikowany kod jest
  */
