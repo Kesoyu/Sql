@@ -10,7 +10,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ProductDatabase db = ProductDatabase.getInstance(getApplicationContext());
+        ProductDatabase db = ProductDatabase.getDatabase(getApplicationContext());
         Product p1 = new Product("komputer",3000);
         db.productDao().wstawProdukt(p1);
         Product p2 = new Product("Monitor",1200);

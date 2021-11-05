@@ -1,5 +1,6 @@
 package com.example.sql;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
@@ -19,9 +20,11 @@ public interface ProductDao {
     void usunProdukt(Product product);
 
     @Query("SELECT * FROM produkty")
-    List<Product> pobierWszystko();
+    LiveData<List<Product>> pobierWszystko();
 
     @Query("SELECT nazwa_prod FROM produkty WHERE cena<:cenka")
     List<String> nazwyProduktowTanszychNiz(int cenka);
     //Jeżeli coś przekazujemy do naszego selecta to popieramy do dwukropkiem
+    @Query("SELECT nazwa_prod FROM produkty")
+    LiveData<List<String>> pobierzNazwy();
 }

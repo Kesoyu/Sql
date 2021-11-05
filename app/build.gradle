@@ -56,5 +56,6 @@ dependencies {
         // optional - Paging 3 Integration
         implementation "androidx.room:room-paging:2.4.0-beta01"
     }
-
+    implementation 'andoridx.lifecycle:lifecycle-viewmodel:2.4.0'
+    implementation 'andoridx.lifecycle:lifecycle-livedata:2.4.0'
 }
